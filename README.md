@@ -37,7 +37,7 @@ app.listen(port, ()=>{
     console.log("App is running on port 3000")
 })
 
-So, to use my application, please use http://localhost:3000/
+So, to use my application, first type node bmicalculator.js on terninal and use http://localhost:3000/
 
 
 
