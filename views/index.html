@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light">
+        <div class="col-md-1"></div>
+        <div class="col-md-11 d-flex align-items-center">
+            <a class="navbar-brand" href="#">
+            <img src="https://cdn2.iconfinder.com/data/icons/men-women-health-wildberry-vol-1/256/BMI_Calculator-512.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            BMI calculator
+            </a>
+        </div>
+  </nav>
+
+    <div class="container mt-5">
+        <h3 class="text-center mb-4" style="color: rgb(103, 11, 119);">Calculate your BMI</h3>
+
+        <form id="bmiForm" action="/calculateBMI" method="post">
+            <div class="mb-4 row justify-content-center ">
+                <div class="col-md-6">
+                    <label for="gender" style="color: rgb(58, 48, 48); font-size: 20px;" class="form-label-gender mb-1">Gender</label>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="gender" id="" value="male">
+                        <label class="form-check-label" for="exampleRadios1">Male</label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="gender" id="" value="female">
+                        <label class="form-check-label" for="exampleRadios2">Female</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 row justify-content-center ">
+                <div class="col-md-6">
+                    <label for="age" style="color: rgb(58, 48, 48); font-size: 20px;" class="form-label-age mb-1">Age</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="age" name="age" required placeholder="Enter your age"> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3 row justify-content-center">
+                <div class="col-md-6">
+                    <label for="weight" style="color: rgb(58, 48, 48); font-size: 20px;" class="form-label-w mb-1">Weight</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="weight" name="weight" required placeholder="Enter your weight">
+                        <select class="small-select" name="weightUnit">
+                            <option value="kg">kg</option>
+                            <option value="g">g</option>
+                            <option value="lbs">lbs</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3 row justify-content-center">
+                <div class="col-md-6">
+                    <label for="height" style="color: rgb(58, 48, 48); font-size: 20px;" class="form-label-h mb-1" >Height</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="height" name="height" required placeholder="Enter your height. (Use dot)">
+                        <select class="small-select" name="heightUnit">
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                            <option value="inches">inches</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3 text-center">
+                <button type="submit" class="btn btn-primary mb-4" value="Calculate BMI">Calculate BMI</button>
+            </div>
+
+        </form>
+
+        <div class="text-center">
+            <h3><span id="bmi"></span></h3>
+            <h4 class="c1" ><span id="bmiCategory"></span> </h4>
+            
+        </div>
+
+    </div>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+
+        <div class="col-md-8"></div>
+
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 ">Zhanna Arystanbekova, SE-2205</span>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
