@@ -5,6 +5,8 @@ You should input your age, gender, weight and height. In case if you need input 
 
 
 # Installation
+git clone
+npm init
 npm install
 npm run
 
